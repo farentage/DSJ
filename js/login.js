@@ -34,7 +34,7 @@ $(function() {
             }
         })
         // 监听form表单
-    let url = 'http://ajax.frontend.itheima.net';
+        // let url = 'http://ajax.frontend.itheima.net';
 
     // let loginData = {
     //     username: ($('.login-box [name=username]').val()),
@@ -48,7 +48,7 @@ $(function() {
             };
             console.log(data);
             e.preventDefault(),
-                $.post(`${url}/api/reguser`, data, function(res) {
+                $.post(`/api/reguser`, data, function(res) {
                     console.log(res);
                     if (res.status !== 0) {
                         return layer.msg(res.message);
@@ -67,9 +67,9 @@ $(function() {
             username: ($('.login-box [name=username]').val()),
             password: ($('.login-box [name=password]').val())
         };
-        console.log(data);
+        // console.log(data);
         // alert(1)
-        $.post(`${url}/api/login`, data, function(res) {
+        $.post(`/api/login`, data, function(res) {
             if (res.status !== 0) {
                 return layer.msg(res.message);
             }
